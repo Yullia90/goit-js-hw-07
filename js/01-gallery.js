@@ -23,6 +23,8 @@ const cardsGallery = createGalleryItems(galleryItems);
 
 galleryContainer.insertAdjacentHTML("beforeend", cardsGallery);
 
+galleryContainer.addEventListener("click", onGalleryContainer);
+
 function createGalleryItems(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
@@ -40,6 +42,13 @@ function createGalleryItems(galleryItems) {
 `;
     })
     .join("");
+}
+function onGalleryContainer(event) {
+  if (!event.target.classList.contains("gallery__link")) {
+    return;
+  }
+
+  console.log(event.target);
 }
 
 // Обрати внимание на то, что изображение обернуто в ссылку, а значит при клике по умолчанию
