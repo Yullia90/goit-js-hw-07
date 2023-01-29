@@ -1,7 +1,5 @@
 import { galleryItems } from "./gallery-items.js";
 
-// 2.Реализация делегирования на div.gallery и получение url большого изображения.
-
 const galleryContainer = document.querySelector(".gallery");
 const cardsGallery = createGalleryItems(galleryItems);
 
@@ -48,12 +46,4 @@ function onGalleryContainer(event) {
     }
   });
 }
-
-//==========================
-// Закрытие с клавиатуры
-// ВНИМАНИЕ
-// Этот функционал не обязателен при сдаче задания, но будет хорошей дополнительной практикой.
-
-// Добавь закрытие модального окна по нажатию клавиши Escape. Сделай так, чтобы прослушивание
-//клавиатуры было только пока открыто модальное окно.У библиотеки basicLightbox есть метод для
-//программного закрытия модального окна.
+console.log(galleryItems);
