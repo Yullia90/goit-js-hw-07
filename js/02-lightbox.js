@@ -4,7 +4,6 @@ const galleryContainer = document.querySelector(".gallery");
 const cardsGallery = createGalleryItems(galleryItems);
 
 galleryContainer.insertAdjacentHTML("beforeend", cardsGallery);
-galleryContainer.addEventListener("click", onClick);
 
 function createGalleryItems(galleryItems) {
   return galleryItems
@@ -21,12 +20,7 @@ function createGalleryItems(galleryItems) {
     .join("");
 }
 
-function onClick(event) {
-  event.preventDefault();
-}
 new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionsDelay: 250,
 });
-
-console.log(galleryItems);
